@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const Header = ({ text }) => <h1>{text}</h1>;
 
 const StatisticLine = ({ text, value }) => {
-    if (text == 'positive')
+    if (text === 'positive')
         return (
             <tr>
                 <td>{text}</td>
@@ -47,12 +47,6 @@ const Statistics = (props) => {
         </div>
     );
 };
-
-const Display = ({ counter, text }) => (
-    <div>
-        {text} {counter}
-    </div>
-);
 
 const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>;
 
